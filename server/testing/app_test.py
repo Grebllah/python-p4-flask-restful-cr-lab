@@ -42,6 +42,7 @@ class TestPlant:
 
         with app.app_context():
             lo = Plant.query.filter_by(name="Live Oak").first()
+            print(lo)
             assert(lo.id)
             assert(lo.name == "Live Oak")
             assert(lo.image == "https://www.nwf.org/-/media/NEW-WEBSITE/Shared-Folder/Wildlife/Plants-and-Fungi/plant_southern-live-oak_600x300.ashx")
